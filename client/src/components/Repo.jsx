@@ -1,11 +1,10 @@
 import React from 'react';
 const Repo = (props) => (
   <div>
-    <p><strong>Repo Owner:</strong> {props.repo.owner}
-    <br /><strong>Repo Name:</strong> {props.repo.name}
-    <br /><strong>Repo ID:</strong> {props.repo.id}
-    <br /><strong>Creation Date:</strong> {props.repo.created_at.slice(0, props.repo.created_at.indexOf('T'))}
-    <br /><strong>Repo Address:</strong> <a href={props.repo.url}>{props.repo.url}</a>
+    <p><strong>Name:</strong> <span className="repoLabels">{props.repo.name}</span>
+    <br /><strong>Owner:</strong> <span className="repoLabels">{props.repo.owner}</span>
+    <br /><strong>Date:</strong> <span className="repoLabels">{props.repo.created_at.slice(0, props.repo.created_at.indexOf('T'))}</span>
+    <br /><strong>Link:</strong> <a href={props.repo.url} target="_blank"><strong>{props.repo.url}</strong></a>
     </p>
   </div>
 )

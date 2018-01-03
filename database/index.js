@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fetcher');
+mongoose.connect('mongodb://localhost/fetcher', () => {
+  mongoose.connection.db.dropDatabase();
+});
 
-var conn = mongoose.connection;
 let repoSchema = mongoose.Schema({
   id: {type: Number, index: {unique: true, dropDups: true}},
   owner: String,

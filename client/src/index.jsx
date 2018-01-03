@@ -57,9 +57,11 @@ class App extends React.Component {
 
   render () {
     return (<div>
-      <h1>GitHub Fetcher</h1>
-      <RepoList repos={this.state.repos}/>
+      {/* <img src="../client/dist/githublogo.png" /> */}
+      <h1 className="githubHeader"><strong>GitHub</strong></h1>
+      <h2 className="fetchbertHeader">&nbsp;/fetchbert</h2>
       <Search onSearch={this.search.bind(this)}/>
+      <RepoList repos={this.state.repos}/>
     </div>)
   }
 }

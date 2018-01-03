@@ -1,3 +1,55 @@
 body {
   font-family: Helvetica;
+  margin-left: 1.5%;
+}
+
+a {
+  text-decoration: none;
+  color: #01A9DB;
+}
+
+#searchInput {
+  width: 25%;
+  height: 20px;
+  margin-top: 0.75%;
+  appearance: none;
+  border: 3px solid #01A9DB;
+  border-top-right-radius: 7.5px;
+  border-top-left-radius: 7.5px;
+  border-bottom-right-radius: 7.5px;
+  padding-left: 0.4%;
+  padding-bottom: 0.2%;
+  font-size: 15px;
+}
+
+#searchButton {
+  margin-top: 0.75%;
+  width: 7%;
+  height: 30px;
+  appearance: none;
+  border: 1.5px solid #2E2E2E;
+  background-color: #2E2E2E;
+  color: white;
+  border-top-right-radius: 7.5px;
+  border-bottom-left-radius: 7.5px;
+  border-bottom-right-radius: 7.5px;
+  font-size: 15px;
+  vertical-align: middle;
+  padding-bottom: 0.175%;
+}
+
+.repoList {
+  margin-top: 3%;
+}
+
+.repoLabels {
+  color:#646464;
+}
+
+.githubHeader, .fetchbertHeader {
+  display: inline-block;
+}
+
+.fetchbertHeader {
+  font-size: 28px;
 }
