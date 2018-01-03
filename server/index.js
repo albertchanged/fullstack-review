@@ -23,8 +23,8 @@ app.post('/repos', function (req, res) {
           name: repo.name,
           url: repo.html_url,
           description: repo.description,
-          updated_at: repo.updated_at,
           created_at: repo.created_at,
+          updated_at: repo.updated_at,
           star_count: repo.stargazers_count
         });
         console.log('Saving repo' + savedRepo.id);
