@@ -18,7 +18,7 @@ app.post('/repos', function (req, res) {
       res.sendStatus(404);
     } else {
       if (data.length === 0) {
-        $('.errorCheck').prepend('No user found -- please enter a valid username!');
+        $('.errorCheck').prepend('<p>No user found -- please enter a valid username!</p>');
       }
       if (data.length > 0) {
         $('.errorCheck').remove();
