@@ -1,6 +1,7 @@
 body {
   font-family: Helvetica;
   margin-left: 1.5%;
+  font-size: 20px;
 }
 
 a {
@@ -9,8 +10,6 @@ a {
 }
 
 #searchInput {
-  width: 25%;
-  height: 20px;
   margin-top: 0.75%;
   appearance: none;
   border: 3px solid #01A9DB;
@@ -19,13 +18,10 @@ a {
   border-bottom-right-radius: 7.5px;
   padding-left: 0.4%;
   padding-bottom: 0.2%;
-  font-size: 15px;
 }
 
 #searchButton {
   margin-top: 0.75%;
-  width: 7%;
-  height: 30px;
   appearance: none;
   border: 1.5px solid #2E2E2E;
   background-color: #2E2E2E;
@@ -33,7 +29,6 @@ a {
   border-top-right-radius: 7.5px;
   border-bottom-left-radius: 7.5px;
   border-bottom-right-radius: 7.5px;
-  font-size: 15px;
   vertical-align: middle;
   padding-bottom: 0.175%;
 }
@@ -50,6 +45,58 @@ a {
   display: inline-block;
 }
 
-.fetchbertHeader {
-  font-size: 28px;
+@media screen and (max-width: 3000px) and (min-width: 1200px) {
+  #searchInput {
+    width: 25%;
+    height: 20px;
+    margin-top: 0.75%;
+    padding-left: 0.4%;
+    padding-bottom: 0.2%;
+    font-size: 15px;
+  }
+  
+  #searchButton {
+    margin-top: 0.75%;
+    width: 7%;
+    height: 30px;
+    appearance: none;
+    font-size: 15px;
+    vertical-align: middle;
+    padding-bottom: 0.175%;
+  }
+
+  .fetchbertHeader {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 300px) {
+  #searchInput {
+    width: 30%;
+    height: 30px;
+    margin-top: 1.5%;
+    padding-left: 0.4%;
+    padding-bottom: 0.2%;
+    font-size: 15px;
+  }
+  
+  #searchButton {
+    margin-top: 1.2%;
+    width: 12.5%;
+    height: 40px;
+    font-size: 17.5px;
+    vertical-align: middle;
+    padding-bottom: 0.175%;
+  }
+
+  .githubHeader {
+    font-size: 40px;
+  }
+
+  .fetchbertHeader {
+    font-size: 32.5px;
+  }
+
+  .repoList {
+    margin-top: 5%;
+  }
 }
