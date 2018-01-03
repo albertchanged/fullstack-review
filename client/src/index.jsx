@@ -42,6 +42,7 @@ class App extends React.Component {
       url: '/repos',
       method: 'GET',
       contentType: 'application/json',
+      data: {'username': 'albertchanged'},
       success: (data) => {
         console.log('GET success: ', data);
         this.setState({
