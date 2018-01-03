@@ -16,21 +16,23 @@ app.post('/repos', function (req, res) {
     if (err) {
       res.sendStatus(404);
     } else {
-      data.forEach((repo) => {
-        var savedRepo = new db.Repo({
-          id: repo.id,
-          owner: repo.owner.login,
-          name: repo.name,
-          url: repo.html_url,
-          description: repo.description,
-          created_at: repo.created_at,
-          updated_at: repo.updated_at,
-          star_count: repo.stargazers_count
+      if (data.length > 0) {
+        data.forEach((repo) => {
+          var savedRepo = new db.Repo({
+            id: repo.id,
+            owner: repo.owner.login,
+            name: repo.name,
+            url: repo.html_url,
+            description: repo.description,
+            created_at: repo.created_at,
+            updated_at: repo.updated_at,
+            star_count: repo.stargazers_count
+          });
+          console.log('Saving repo' + savedRepo.id);
+          savedRepo.save();
         });
-        console.log('Saving repo' + savedRepo.id);
-        savedRepo.save();
-      });
-      res.status(200).json(data);
+        res.status(200).json(data);
+      }
     }
   })
 });
