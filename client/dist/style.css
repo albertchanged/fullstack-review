@@ -33,6 +33,10 @@ a {
   padding-bottom: 0.175%;
 }
 
+.errorCheck {
+  margin-top: 3%;
+  color: #F74242;
+}
 .repoList {
   margin-top: 3%;
 }

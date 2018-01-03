@@ -6,6 +6,7 @@ const db = require('../database/index.js');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/../client/dist'));
+const jquery = require('jquery');
 
 app.post('/repos', function (req, res) {
   // TODO - your code here!
@@ -16,7 +17,11 @@ app.post('/repos', function (req, res) {
     if (err) {
       res.sendStatus(404);
     } else {
+      if (data.length === 0) {
+        $('.errorCheck').prepend('No user found -- please enter a valid username!');
+      }
       if (data.length > 0) {
+        $('.errorCheck').remove();
         data.forEach((repo) => {
           var savedRepo = new db.Repo({
             id: repo.id,
