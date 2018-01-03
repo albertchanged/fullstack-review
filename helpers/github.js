@@ -13,7 +13,7 @@ let getReposByUsername = (username, callback) => {
     method: 'GET',
     headers: {
       'User-Agent': 'request',
-      'Authorization': `token ${TOKEN}`
+      'Authorization': `token ${process.env.TOKEN}`
     }
   };
   request(options, (err, res, body) => {
