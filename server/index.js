@@ -38,13 +38,13 @@ app.get('/repos', function (req, res) {
   // TODO - your code here!
   // This route should send back the top 25 repos
   db.Repo.find().sort({created_at: 'descending'}).limit(25).exec()
-  .then(function(data){
-    console.log('Successfully retrieved repos from db: ', data);
-    res.status(200).send(data);
-  })
-  .catch(function(err){
-    console.log('Could not retrieve repos from db: ', err);
-  });
+    .then(function(data){
+      console.log('Successfully retrieved repos from db: ', data);
+      res.status(200).send(data);
+    })
+    .catch(function(err){
+      console.log('Could not retrieve repos from db: ', err);
+    });
 });
 
 let port = 1128;
