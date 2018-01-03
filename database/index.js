@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/fetcher', () => {
-  // mongoose.connection.db.dropDatabase();
+  mongoose.connection.db.dropDatabase();
 });
 
 let repoSchema = mongoose.Schema({
