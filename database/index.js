@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/fetcher', () => {
+mongoose.connect(process.env.MONGODB_URI, () => {
   // mongoose.connection.db.dropDatabase();
 });
 
