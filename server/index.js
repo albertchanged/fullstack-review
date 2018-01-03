@@ -17,11 +17,11 @@ app.post('/repos', function (req, res) {
     if (err) {
       res.sendStatus(404);
     } else {
-      if (data.length === 0) {
-        $('.errorCheck').prepend('<p>No user found -- please enter a valid username!</p>');
+      if (!data.length) {
+        $('.errorCheck').append('<p className="errorTag">No user found -- please enter a valid username!</p>');
       }
       if (data.length > 0) {
-        $('.errorCheck').remove();
+        $('.errorTag').remove();
         data.forEach((repo) => {
           var savedRepo = new db.Repo({
             id: repo.id,
