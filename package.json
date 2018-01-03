@@ -7,6 +7,9 @@
     "react-dev": "webpack -d --watch",
     "start": "nodemon server/index.js"
   },
+  "engines": {
+    "node": "7.7.4"
+  },
   "author": "Beth Johnson",
   "license": "ISC",
   "devDependencies": {
