@@ -10,6 +10,7 @@ let repoSchema = mongoose.Schema({
   url: String,
   description: String,
   created_at: Date,
+  updated_at: Date,
   star_count: Number
 });
 
