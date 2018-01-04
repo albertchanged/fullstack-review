@@ -17,7 +17,7 @@ app.post('/repos', function (req, res) {
     if (err) {
       res.sendStatus(404);
     } else {
-      if (!data) {
+      if (typeof data === 'object') {
         $('.errorCheck').append('<p className="errorTag">No user found -- please enter a valid username!</p>');
       }
       if (data.length > 0) {
