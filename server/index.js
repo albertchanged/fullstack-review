@@ -36,7 +36,7 @@ app.post('/repos', function (req, res) {
         res.status(200).json(data);
       } else {
         // console.log('Invalid username');
-        $('.errorCheck').append('<p className="errorTag">No user found -- please enter a valid username!</p>');
+        $('.errorCheck').append('<p class="errorTag">No user found -- please enter a valid username!</p>');
       }
     }
   })
