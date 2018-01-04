@@ -15,6 +15,7 @@ app.post('/repos', function (req, res) {
   // save the repo information in the database
   github.getReposByUsername(req.body.username, (err, data) => {
     if (err) {
+      // $('.errorCheck').append('<p class="errorTag">No user found -- please enter a valid username!</p>');
       res.sendStatus(404);
     } else {
       if (data.length > 0) {
@@ -33,9 +34,7 @@ app.post('/repos', function (req, res) {
           savedRepo.save();
         });
         res.status(200).json(data);
-        if ($('.errorTag').length) { $('.errorTag').remove(); }
-      } else {
-        $('.errorCheck').append('<p class="errorTag">No user found -- please enter a valid username!</p>');
+        // if ($('.errorTag').length) { $('.errorTag').remove(); }
       }
     }
   })
