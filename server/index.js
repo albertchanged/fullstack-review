@@ -17,7 +17,8 @@ app.post('/repos', function (req, res) {
     if (err) {
       res.sendStatus(404);
     } else {
-      if (data.length > 0) {
+      if (data.length > 0 && Arrays.isArray(data)) {
+        if ($('.errorTag').length) { $('.errorTag').remove(); }
         data.forEach((repo) => {
           var savedRepo = new db.Repo({
             id: repo.id,
@@ -33,10 +34,9 @@ app.post('/repos', function (req, res) {
           savedRepo.save();
         });
         res.status(200).json(data);
-        // if ($('.errorTag').length) { $('.errorTag').remove(); }
       } else {
-        console.log('Invalid username');
-        // $('.errorCheck').append('<p className="errorTag">No user found -- please enter a valid username!</p>');
+        // console.log('Invalid username');
+        $('.errorCheck').append('<p className="errorTag">No user found -- please enter a valid username!</p>');
       }
     }
   })
