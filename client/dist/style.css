@@ -4,6 +4,11 @@ body {
   font-size: 20px;
 }
 
+.repoListBody {
+  display: grid;
+  grid-template-columns: 0.5fr;
+}
+
 a {
   text-decoration: none;
   color: #01A9DB;

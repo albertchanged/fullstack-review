@@ -5,7 +5,8 @@ const RepoList = (props) => {
     <div className="repoList">
       <h4>Check out these awesome repositories!</h4>
       <p>There are {props.repos.length} repos below.</p>
-      <div>
+      <p>Hi</p>
+      <div className="repoListBody">
       {
         props.repos.map((repo) => (
           <Repo
