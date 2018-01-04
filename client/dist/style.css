@@ -4,12 +4,7 @@ body {
   font-size: 20px;
 }
 
-.repoListBody {
-  display: grid;
-  grid-area: content;
-  grid-template-columns: 0.5fr 0.5fr;
-  grid-template-areas: "content content";
-}
+
 
 a {
   text-decoration: none;
@@ -79,6 +74,13 @@ a {
   .fetchbertHeader {
     font-size: 28px;
   }
+
+  .repoListBody {
+    display: grid;
+    grid-area: content;
+    grid-template-columns: 0.3fr 0.3fr 0.3fr;
+    grid-template-areas: "content content content";
+  }
 }
 @media screen and (max-width: 1024px) and (min-width: 300px) {
   #searchInput {
@@ -109,5 +111,12 @@ a {
 
   .repoList {
     margin-top: 5%;
+  }
+
+  .repoListBody {
+    display: grid;
+    grid-area: content;
+    grid-template-columns: 0.4fr 0.4fr;
+    grid-template-areas: "content content";
   }
 }
