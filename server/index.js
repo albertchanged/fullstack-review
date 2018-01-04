@@ -17,9 +17,9 @@ app.post('/repos', function (req, res) {
     if (err) {
       res.sendStatus(404);
     } else {
-      if (typeof data === 'object') {
-        $('.errorCheck').append('<p className="errorTag">No user found -- please enter a valid username!</p>');
-      }
+      // if (typeof data === 'object') {
+      //   $('.errorCheck').append('<p className="errorTag">No user found -- please enter a valid username!</p>');
+      // }
       if (data.length > 0) {
         data.forEach((repo) => {
           var savedRepo = new db.Repo({
@@ -36,7 +36,7 @@ app.post('/repos', function (req, res) {
           savedRepo.save();
         });
         res.status(200).json(data);
-        if ($('.errorTag')) { $('.errorTag').remove(); }
+        // if ($('.errorTag')) { $('.errorTag').remove(); }
       }
     }
   })
