@@ -6,7 +6,9 @@ body {
 
 .repoListBody {
   display: grid;
-  grid-template-columns: 0.5fr;
+  grid-area: content;
+  grid-template-columns: 1fr;
+  grid-template-areas: "content content";
 }
 
 a {
