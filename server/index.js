@@ -35,6 +35,7 @@ app.post('/repos', function (req, res) {
         res.status(200).json(data);
         // if ($('.errorTag').length) { $('.errorTag').remove(); }
       } else {
+        console.log('Invalid username');
         // $('.errorCheck').append('<p className="errorTag">No user found -- please enter a valid username!</p>');
       }
     }
