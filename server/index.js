@@ -21,7 +21,6 @@ app.post('/repos', function (req, res) {
         $('.errorCheck').append('<p className="errorTag">No user found -- please enter a valid username!</p>');
       }
       if (data.length > 0) {
-        $('.errorTag').remove();
         data.forEach((repo) => {
           var savedRepo = new db.Repo({
             id: repo.id,
@@ -37,6 +36,7 @@ app.post('/repos', function (req, res) {
           savedRepo.save();
         });
         res.status(200).json(data);
+        if ($('.errorTag')) { $('.errorTag').remove(); }
       }
     }
   })
