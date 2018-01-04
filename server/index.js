@@ -33,9 +33,9 @@ app.post('/repos', function (req, res) {
           savedRepo.save();
         });
         res.status(200).json(data);
-        if ($('.errorTag').length) { $('.errorTag').remove(); }
+        // if ($('.errorTag').length) { $('.errorTag').remove(); }
       } else {
-        $('.errorCheck').append('<p className="errorTag">No user found -- please enter a valid username!</p>');
+        // $('.errorCheck').append('<p className="errorTag">No user found -- please enter a valid username!</p>');
       }
     }
   })
